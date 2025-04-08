@@ -107,5 +107,17 @@
       </div>
     </div>
   </div>
-</body>
+
+<script>
+    document.querySelector("form").addEventListener("submit", function(e) {
+      const password = document.querySelector('input[placeholder="Password"]').value;
+      const confirmPassword = document.querySelector('input[placeholder="Confirm Password"]').value;
+  
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        e.preventDefault(); // prevent form submission
+      }
+    });
+  </script>
+  </body>
 </html>
