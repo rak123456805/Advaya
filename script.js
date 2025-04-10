@@ -84,3 +84,17 @@ window.addEventListener('DOMContentLoaded', () => {
     // Trigger initial scroll event to show visible sections
     window.dispatchEvent(new Event('scroll'));
 }); 
+// Let's Start button logic
+document.querySelector('.btn-Lets-Start').addEventListener('click', function(e) {
+    e.preventDefault(); // prevent default link behavior
+    
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn'); // or localStorage
+
+    if (isLoggedIn === 'true') {
+        // Proceed to the chatbot or next step
+        window.location.href = 'chatbot.html'; // change to your actual chatbot URL
+    } else {
+        // Redirect to login
+        window.location.href = 'login.html';
+    }
+});
