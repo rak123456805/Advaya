@@ -83,8 +83,6 @@ window.addEventListener('DOMContentLoaded', () => {
     
     // Trigger initial scroll event to show visible sections
     window.dispatchEvent(new Event('scroll'));
-<<<<<<< HEAD
-}); 
 // Let's Start button logic
 document.querySelector('.btn-Lets-Start').addEventListener('click', function(e) {
     e.preventDefault(); // prevent default link behavior
@@ -99,6 +97,4 @@ document.querySelector('.btn-Lets-Start').addEventListener('click', function(e) 
         window.location.href = 'login.html';
     }
 });
-=======
-}); 
->>>>>>> a4686b69cd1f0061fea273e0b86ecb10def6452f
+});
