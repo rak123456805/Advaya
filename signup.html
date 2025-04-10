@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Advaya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+    }
+
+    .signup-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-box {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .signup-box h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .btn-signup {
+      display: block;
+      width: 100%;
+      background-color: #4f46e5;
+      color: white;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-signup:hover {
+      background-color: #4338ca;
+    }
+
+    .signup-footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
+    .signup-footer a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    .signup-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <div class="signup-box">
+      <h2>Create Your Advaya Account</h2>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <input type="text" placeholder="Full Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email Address" required />
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" required />
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Confirm Password" required />
+        </div>
+        <button type="submit" class="btn-signup">Sign Up</button>
+      </form>
+      <div class="signup-footer">
+        Already have an account? <a href="login.html">Login</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+    document.querySelector("form").addEventListener("submit", function(e) {
+      const password = document.querySelector('input[placeholder="Password"]').value;
+      const confirmPassword = document.querySelector('input[placeholder="Confirm Password"]').value;
+  
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        e.preventDefault(); // prevent form submission
+      }
+    });
+  </script>
+  </body>
+</html>
