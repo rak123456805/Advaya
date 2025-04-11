@@ -1,3 +1,4 @@
+
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -79,6 +80,18 @@ window.addEventListener('DOMContentLoaded', () => {
         section.style.opacity = '0';
         section.style.transform = 'translateY(20px)';
         section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        // Explore button logic
+const exploreBtn = document.querySelector('.btn-explore');
+const exploreContent = document.getElementById('explore-content');
+
+if (exploreBtn && exploreContent) {
+    exploreBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        exploreContent.style.display = 'block';
+        exploreContent.scrollIntoView({ behavior: 'smooth' });
+    });
+}
+
     });
     
     // Trigger initial scroll event to show visible sections
